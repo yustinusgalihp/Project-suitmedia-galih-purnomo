@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  position: relative;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-link:before,
+.nav-link:after {
+  margin-top: 2rem;
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 15%;
+  width: 100%;
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.3s;
+}
+
+.nav-link:hover {
+  color: "";
+}
+
+.nav-link:hover:before,
+.nav-link:hover:after {
+  margin-top: 2rem;
+  transform: scaleX(1);
+}
